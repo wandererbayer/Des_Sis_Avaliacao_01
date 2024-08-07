@@ -1,0 +1,280 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body
+{
+    font-family: "Kanit", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+/* ----------------------------------------------------------------------- Navbar*/
+.nav_bar
+{
+    background-color: #0b1d1e;
+    height: 10svh;
+    align-content: center;
+    justify-content: center;
+}
+
+ul
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+li
+{
+    list-style: none;
+}
+
+a
+{
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+}
+
+a:hover
+{
+    text-decoration: underline;
+    letter-spacing: 1px;
+    filter: drop-shadow(2px 2px 2px white);
+}
+
+/* ----------------------------------------------------------------------- Section 01*/
+.Section01
+{
+    background-color: #0d2621;
+    display: flex;
+    height: 70svh;
+    align-items: center;
+    justify-content: center;
+    padding-top: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 60px;
+    gap: 2vw;
+}
+
+.box_left
+{
+    width: 400px;
+    height: 400px;
+    position: relative;
+    border-radius: 999px;
+    overflow: hidden;
+    transition: all 200ms linear;
+    filter: drop-shadow(-1px -1px 6px);
+    box-shadow: black 10px 10px 8px;
+}
+
+.box_left:hover
+{
+    -webkit-filter: drop-shadow(2px 2px 4px white)
+        drop-shadow(-2px -2px 4px white);
+    filter: drop-shadow(2px 2px 4px white) drop-shadow(-2px -2px 4px white);
+}
+
+.hero_img
+{
+    height: 400px;
+    width: 400px;
+}
+
+.box_right
+{
+    color: white;
+}
+
+.btn
+{
+    align-self: center;
+    justify-content: space-between;
+}
+
+/* ----------------------------------------------------------------------- Section 02*/
+.Section02
+{
+    background-color: #193427;
+    display: flex;
+    height: 70svh;
+    align-items: center;
+    justify-content: center;
+    gap: 4vw;
+}
+
+.cards
+{
+    width: 500px;
+    height: 500px;
+    border-radius: 50px;
+    background: linear-gradient(116deg, #0b1d1e, #9da487, #284733);
+    background-size: 600% 600%;
+    -webkit-animation: AnimationName 10s ease infinite;
+    -moz-animation: AnimationName 10s ease infinite;
+    animation: AnimationName 10s ease infinite;
+    box-shadow: black 10px 10px 8px;
+}
+
+@-webkit-keyframes AnimationName 
+{
+    0%{background-position:0% 23%}
+    50%{background-position:100% 78%}
+    100%{background-position:0% 23%}
+}
+@-moz-keyframes AnimationName 
+{
+    0%{background-position:0% 23%}
+    50%{background-position:100% 78%}
+    100%{background-position:0% 23%}
+}
+@keyframes AnimationName 
+{
+    0%{background-position:0% 23%}
+    50%{background-position:100% 78%}
+    100%{background-position:0% 23%}
+}
+
+/* ----------------------------------------------------------------------- Section 03*/
+.Section03
+{
+    background-color: #0d2621;
+    display: flex;
+    height: 70svh;
+    align-items: center;
+    justify-content: center;
+    padding-top: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 60px;
+    gap: 2vw;
+    color: white;
+}
+
+.S3_content
+{
+    padding: 4%;
+}
+
+.s3_h2
+{
+    transform: translatey(50px);
+    opacity: 0;
+    filter: blur(5px);
+    animation: aparecerTexto_Vertical 1.2s linear forwards;
+}
+
+.s3_p
+{
+    transform: translatey(70px);
+    opacity: 0;
+    filter: blur(5px);
+    animation: aparecerTexto_Vertical 1.8s linear forwards;
+}
+
+@keyframes aparecerTexto_Vertical
+{
+    to
+    {
+        opacity: 1;
+        filter: blur(0px);
+        transform: translateY(0);
+    }
+}
+
+
+/* ----------------------------------------------------------------------- Section 04*/
+.Section04
+{
+    background-color: #9da487;
+    display: flex;
+    height: 70svh;
+    align-items: center;
+    justify-content: center;
+    padding-top: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 60px;
+    gap: 2vw;
+}
+
+/* ----------------------------------------------------------------------- Footer*/
+footer
+{
+    background-color: #0d2621;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    text-align: center;
+    color: white;
+}
+
+footer > a > img:hover
+{
+    transform: rotate(360deg);
+    opacity: 1;
+    transition: all 0.2s linear;
+}
+
+@media (width <= 600px)
+{
+    .section01_div_left
+    {
+        width: 200px; 
+        height: 200px;
+    }
+
+    .imagem_01
+    {
+        width: 200px; 
+        height: 200px;
+    }
+
+    .l01
+    {
+        width: auto;
+        text-align: center;
+    } 
+
+    .p01
+    {
+        width: auto;
+        text-align: center;
+    }
+
+    ul
+    {
+        gap: 2vw;
+        font-size: 16px;
+    }
+
+    #section04
+    {
+        gap: 1vw;
+    }
+
+    .contact_right
+    {
+        width: 80%;
+        min-width: 80%;
+        max-width: 80%;
+    }
+
+    #confMsg
+    {
+        width: 200px;
+        max-height: auto;
+    }
+}
