@@ -8,25 +8,46 @@
 
 body
 {
-    font-family: "Kanit", sans-serif;
+    font-family: "Sedan SC", serif;
     font-weight: 200;
     font-style: normal;
+}
+
+p
+{
+    font-size: 1.1rem;
+    line-height: 1.7rem
 }
 
 /* ----------------------------------------------------------------------- Navbar*/
 .nav_bar
 {
+    display: flex;
     background-color: #0b1d1e;
     height: 10svh;
     align-content: center;
     justify-content: center;
+    align-items: center;
+    gap: 16vw;
+    white-space: nowrap;
 }
 
 ul
 {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 8vw;
+    white-space: nowrap;
+}
+
+.logo_text
+{
+    font-family: "Bruno Ace", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2rem;
+    color: white;
 }
 
 li
@@ -69,34 +90,33 @@ a:hover
     height: 400px;
     position: relative;
     border-radius: 999px;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
     transition: all 200ms linear;
-    filter: drop-shadow(-1px -1px 6px);
-    box-shadow: black 10px 10px 8px;
+    -webkit-filter: drop-shadow(1px 1px 2px black)
+        drop-shadow(-1px -1px 2px black);
+    filter: drop-shadow(1px 1px 2px black) drop-shadow(-1px -1px 2px black);
 }
 
 .box_left:hover
 {
-    -webkit-filter: drop-shadow(2px 2px 4px white)
+    -webkit-filter: drop-shadow(1px 1px 3px white)
         drop-shadow(-2px -2px 4px white);
-    filter: drop-shadow(2px 2px 4px white) drop-shadow(-2px -2px 4px white);
+    filter: drop-shadow(1px 1px 3px white) drop-shadow(-2px -2px 4px white);
 }
 
 .hero_img
 {
-    height: 400px;
-    width: 400px;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 .box_right
 {
     color: white;
-}
-
-.btn
-{
-    align-self: center;
-    justify-content: space-between;
+    width: 70%;
 }
 
 /* ----------------------------------------------------------------------- Section 02*/
@@ -105,9 +125,13 @@ a:hover
     background-color: #193427;
     display: flex;
     height: 70svh;
-    align-items: center;
-    justify-content: center;
     gap: 4vw;
+    align-content: center;
+    justify-content: center;
+    padding-top: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 60px;
 }
 
 .cards
@@ -117,25 +141,38 @@ a:hover
     border-radius: 50px;
     background: linear-gradient(116deg, #0b1d1e, #9da487, #284733);
     background-size: 600% 600%;
-    -webkit-animation: AnimationName 10s ease infinite;
-    -moz-animation: AnimationName 10s ease infinite;
-    animation: AnimationName 10s ease infinite;
+    -webkit-animation: gradiente_anim 8s ease infinite;
+    -moz-animation: gradiente_anim 8s ease infinite;
+    animation: gradiente_anim 8s ease infinite;
     box-shadow: black 10px 10px 8px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    padding: 5%;
 }
 
-@-webkit-keyframes AnimationName 
+.card_icon
+{
+    width: 45%;
+    height: auto;
+    filter: drop-shadow(5px 5px 3px #0b1d1e);
+}
+
+@-webkit-keyframes gradiente_anim 
 {
     0%{background-position:0% 23%}
     50%{background-position:100% 78%}
     100%{background-position:0% 23%}
 }
-@-moz-keyframes AnimationName 
+@-moz-keyframes gradiente_anim 
 {
     0%{background-position:0% 23%}
     50%{background-position:100% 78%}
     100%{background-position:0% 23%}
 }
-@keyframes AnimationName 
+@keyframes gradiente_anim 
 {
     0%{background-position:0% 23%}
     50%{background-position:100% 78%}
@@ -196,13 +233,108 @@ a:hover
     background-color: #9da487;
     display: flex;
     height: 70svh;
-    align-items: center;
+    gap: 4vw;
+    align-content: center;
     justify-content: center;
     padding-top: 60px;
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 60px;
-    gap: 2vw;
+}
+
+.Contato
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.S4_h2
+{
+    background: linear-gradient(116deg, #0b1d1e, #284733, #9da487, #193427);
+    background-size: 600% 600%;
+    -webkit-animation: gradiente_anim 3s ease infinite;
+    -moz-animation: gradiente_anim 3s ease infinite;
+    animation: gradiente_anim 3s ease infinite;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.Label_nome
+{
+    display:block; 
+    position:relative; 
+    bottom:1px;
+    left: -75px; 
+    width:fit-content; 
+    padding:0px 5px; 
+    background-color: #9da487;
+}
+
+.Label_msg
+{
+    display:block; 
+    position:relative; 
+    bottom:1px;
+    left: -57px; 
+    width:fit-content; 
+    padding:0px 5px; 
+    background-color: #9da487;
+}
+
+input
+{
+    background-color: transparent;
+    border: #0b1d1e solid 2px;
+    border-radius: 10px;
+    width: 200px;
+    height: 50px;
+    margin-bottom: 5%;
+    padding: 0 20px;
+    box-shadow: 5px 5px 3px black;
+}
+
+textarea
+{
+    background-color: transparent;
+    border: #0b1d1e solid 2px;
+    border-radius: 10px;
+    width: 200px;
+    height: 50px;
+    margin-bottom: 5%;
+    padding: 15px 20px;
+    box-shadow: 5px 5px 3px black;
+    scrollbar-width: thin;
+    scrollbar-color: #284733  #0b1d1e;
+}
+
+input:focus,
+textarea:focus
+{
+    outline: 1px solid #0b1d1e;
+}
+
+.btn
+{
+    background-color: #0b1d1e;
+    color: white;
+    border-radius: 10px;
+    width: 200px;
+    height: 50px;
+    margin-top: 5%;
+    box-shadow: 5px 5px 3px black;
+}
+
+.btn:hover
+{
+    background-color: #284733;
+    color: white;
+    text-shadow: white 0px 0px 5px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    box-shadow: 5px 5px 3px black;
 }
 
 /* ----------------------------------------------------------------------- Footer*/
@@ -214,7 +346,7 @@ footer
     width: 100%;
     justify-content: center;
     align-items: center;
-    gap: 1vw;
+    gap: 4vw;
     padding-top: 1rem;
     padding-bottom: 1rem;
     text-align: center;
@@ -228,7 +360,13 @@ footer > a > img:hover
     transition: all 0.2s linear;
 }
 
-@media (width <= 600px)
+footer > a > p
+{
+    margin-bottom: 10%;
+    font-size: small;
+}
+
+@media (width <= 660px)
 {
     .section01_div_left
     {
@@ -278,3 +416,126 @@ footer > a > img:hover
         max-height: auto;
     }
 }
+
+/* ----------------------------------------------------------------------- @media*/
+@media (width <= 1200px) 
+{
+    .nav_bar
+    {
+        height: auto;
+        padding: 20px;
+    }
+
+    .nav_bar ul 
+    {
+        align-content: center;
+        justify-content: center;
+    }
+
+    .Section01, 
+    .Section02, 
+    .Section03, 
+    .Section04 
+    {
+        flex-direction: column;
+        height: auto;
+        padding: 40px 20px;
+        gap: 4vw;
+    }
+
+    .box_left 
+    {
+        width: 300px;
+        height: 300px;
+    }
+
+    .cards 
+    {
+        width: 90%;
+        height: auto;
+    }
+}
+
+@media (height <= 768px) 
+{
+    .nav_bar
+    {
+        height: auto;
+        padding: 20px;
+    }
+
+    .nav_bar ul 
+    {
+        align-content: center;
+        justify-content: center;
+    }
+
+    .box_left 
+    {
+        width: 300px;
+        height: 300px;
+    }
+
+    .cards 
+    {
+        width: 100%;
+        height: auto;
+    }
+
+    .Section01, 
+    .Section02, 
+    .Section03, 
+    .Section04 
+    {
+        padding: 40px 20px;
+        gap: 4vw;
+    }
+}
+
+@media (width <= 850px) 
+{
+    .nav_bar ul 
+    {
+        gap: 6vw;
+    }
+}
+
+@media (width <= 760px) 
+{
+    .nav_bar ul 
+    {
+        gap: 3vw;
+    }
+}
+
+@media (width <= 630px) 
+{
+    .nav_bar ul 
+    {
+        gap: 1.5vw;
+    }
+}
+
+@media (width <= 615px) 
+{
+    .nav_bar
+    {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .nav_bar_ul
+    {
+        flex-direction: column;
+        gap: 2vw;
+    }
+}
+
+@media (width <= 335px) 
+{
+    .box_left
+    {
+        display: none;
+    }
+}
+
